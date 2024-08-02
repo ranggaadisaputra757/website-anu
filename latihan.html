@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Jomoks</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            color: #333;
+        }
+        header {
+            background: rgba(53, 66, 74, 0.8);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(53, 66, 74, 0.8);
+        }
+        nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #575d63;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: rgba(53, 66, 74, 0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            padding: 20px;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+            font-size: 2rem;
+            color: #35424a;
+        }
+        .about-content, .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .about-content img, .contact-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+        .about-content p, .contact-content p {
+            text-align: center;
+            max-width: 600px;
+            animation: fadeIn 1s ease-out;
+            font-size: 1.125rem;
+            color: #333;
+        }
+        .contact-content ul {
+            list-style: none;
+            padding: 0;
+            animation: fadeIn 1s ease-out;
+        }
+        .contact-content ul li {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .contact-content ul li:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Anti Jomoks</h1>
+    </header>
+    <nav>
+        <a href="#home" onclick="scrollToSection(event, 'home')">Ambatron</a>
+        <a href="#about" onclick="scrollToSection(event, 'about')">JMK 48</a>
+        <a href="#contact" onclick="scrollToSection(event, 'contact')">Ambatukam</a>
+    </nav>
+    <main>
+        <section id="home" class="section visible">
+            <h2>Ambatron</h2>
+            <p>Apa itu Ambatron yang Viral di Tiktok? ambraton itu apa? Video Ambatron di CCTV kota Ngawi banyak beredar. Ambatron merupakan robot Profesor Fuad.
+                .</p>
+                <img src="https://i.ytimg.com/vi/PgctyrzgkM4/mqdefault.jpg">
+            <h3>OPEN PEMAIN FILM</h3>
+            <ul>
+                <li>1. Kru</li>
+                <li>2. Editor</li>
+                <li>3. Kameramen</li>
+                <li>4. Aktor</li>
+            </ul>
+            <button class="home-button" onclick="goToHome()">Mulai</button>
+        </section>
+        <section id="about" class="section">
+            <h2>JMK 48</h2>
+            <div class="about-content">
+                <img src="https://i.pinimg.com/736x/58/59/18/585918e664da0622e128d2964adae6aa.jpg" alt="Gambar Tentang Kami">
+                <p>Anda Tidak Kenal Kami ? Perkenal Kami Dari JMK 48 ,Mari Ramaikan Keseruan Konser JMK 48 DI USA  ,Terimakasih :)</p>
+                <h3>OPEN MEMBER</h3>
+                <ul>
+                    <li>1. berlukit hitam</li>
+                    <li>2. Pelangi</li>
+                    <li>3. Jago Goyang</li>
+                    <li>4. Imoetttt</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Ambatukam</h2>
+            <div class="contact-content">
+                <img src="https://i1.sndcdn.com/artworks-Z6PQHY5GG48AUapX-K1mZjQ-t500x500.jpg" alt="Gambar Kontak Kami">
+                <p>Arti Ambatukam itu Apa Sih? Ini Dia Penjelasannya : Pernahkah kamu melihat meme ambatukam baik itu di postingan facebook atau bahkan youtube tapi bingung maksudnya apa? Yuk pelajari mengenai arti ambatukam dan mengapa kata yang satu ini bisa jadi viral di sosial media.
+
+                </p>
+                <ul>
+                    <li>Email: <a href="ambatron@example.com">ambatron@example.com</a></li>
+                    <li>Telepon: <a href="tel:123-456-7890">xxxxxxxxxxxx</a></li>
+                    <li>Alamat: USA </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; WebSite Jomok</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        function scrollToSection(event, id) {
+            event.preventDefault();
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function goToHome() {
+            window.location.href = '#home';
+        }
+    </script>
+</body>
+</html>
